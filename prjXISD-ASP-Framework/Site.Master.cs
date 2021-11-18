@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjXISD_Lib_Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace prjXISD_ASP_Framework
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            divSideMenu.Disabled = true;
         }
     }
 }

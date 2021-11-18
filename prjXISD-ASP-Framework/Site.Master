@@ -38,31 +38,20 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="sidenav">
-                    <img style="width: 100%; padding: 15px;" src="Images/cargohub-logo.png" />
-                    <a runat="server" href="~/Orders">Orders</a>
-                    <a runat="server" href="~/Customers">Customers</a>
-                    <a runat="server" href="~/Trucks">Trucks</a>
-                    <a runat="server" href="~/Drivers">Drivers</a>
-                    <a runat="server" href="~/Timesheet">Timesheet</a>
-                    <a runat="server" href="~/Reporting">Reporting</a>
-                    <a runat="server" href="~/Users">Users</a>
-                    <a runat="server" href="~/Account">Account Settings</a>
-                    <a runat="server" href="~/Logout">Log Out</a>
-                </div>
-            </div>
+        <div runat="server" id="divSideMenu" class="sidenav">
+            <img style="width: 100%; padding: 15px;" src="Images/cargohub-logo.png" />
+            <a runat="server" href="~/Orders">Orders</a>
+            <a runat="server" href="~/Customers">Customers</a>
+            <a runat="server" href="~/Trucks">Trucks</a>
+            <a runat="server" href="~/Drivers">Drivers</a>
+            <a runat="server" href="~/Timesheet">Timesheet</a>
+            <a runat="server" href="~/Reporting">Reporting</a>
+            <a runat="server" href="~/Users">Users</a>
+            <a runat="server" href="~/Account">Account Settings</a>
+            <a runat="server" href="~/Logout">Log Out</a>
         </div>
-        <div class="container body-content">
+
+        <div style="width: 85%; margin-left: 14%;" class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
@@ -79,7 +68,7 @@
     /* The sidebar menu */
     .sidenav {
         height: 100%; /* Full-height: remove this if you want "auto" height */
-        width: 15%; /* Set the width of the sidebar */
+        width: 13%; /* Set the width of the sidebar */
         position: fixed; /* Fixed Sidebar (stay in place on scroll) */
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
@@ -87,6 +76,7 @@
         background-color: rgba(41, 41, 41, 1);
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 20px;
+        margin-right: 1%;
     }
 
         /* The navigation menu links */
@@ -101,6 +91,13 @@
             /* When you mouse over the navigation links, change their color */
             .sidenav a:hover {
                 color: #f1f1f1;
+                background-color: #808080;
+            }
+
+            /* When you mouse over the navigation links, change their color */
+            .sidenav a:active {
+                color: #f1f1f1;
+                background-color: #808080;
             }
 
     /* Style page content */
