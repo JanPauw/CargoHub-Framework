@@ -41,20 +41,20 @@
         <div runat="server" class="sidenav">
             <img style="width: 100%; padding: 15px;" src="Images/cargohub-logo.png" />
             <div runat="server" id="divNotLoggedIn">
-                <a runat="server" href="~/Login">Log in</a>
+                <a id="login" runat="server" href="~/Login">Log in</a>
             </div>
             <div runat="server" id="divSideMenuTop" style="height: 55%">
-                <a runat="server" href="~/Orders">Orders</a>
-                <a runat="server" href="~/Customers">Customers</a>
-                <a runat="server" href="~/Trucks">Trucks</a>
-                <a runat="server" href="~/Drivers">Drivers</a>
-                <a runat="server" href="~/Timesheet">Timesheet</a>
-                <a runat="server" href="~/Reporting">Reporting</a>
+                <a id="orders" runat="server" href="~/Orders">Orders</a>
+                <a id="customers" runat="server" href="~/Customers">Customers</a>
+                <a id="trucks" runat="server" href="~/Trucks">Trucks</a>
+                <a id="drivers" runat="server" href="~/Drivers">Drivers</a>
+                <a id="timesheet" runat="server" href="~/Timesheet">Timesheet</a>
+                <a id="reporting" runat="server" href="~/Reporting">Reporting</a>
             </div>
             <div runat="server" id="divSideMenuBot" style="">
-                <a runat="server" href="~/Users">Users</a>
-                <a runat="server" href="~/Account">Account Settings</a>
-                <a runat="server" href="~/Logout">Log Out</a>
+                <a id="users" runat="server" href="~/Users">Users</a>
+                <a id="account" runat="server" href="~/Account">Account Settings</a>
+                <a id="logout" runat="server" href="~/Logout">Log Out</a>
             </div>
         </div>
 
@@ -101,6 +101,7 @@
                 color: black;
                 background-color: #f1f1f1;
                 text-decoration: underline #FF7A38;
+                box-shadow: 0px 0px 10px #888888;
             }
 
     /* Style page content */

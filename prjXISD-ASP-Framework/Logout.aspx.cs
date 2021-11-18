@@ -11,7 +11,9 @@ namespace prjXISD_ASP_Framework
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["user"] = null;
+            Response.Redirect("Login.aspx");
+            return;
         }
     }
 }
