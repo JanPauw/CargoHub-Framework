@@ -38,17 +38,24 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div runat="server" id="divSideMenu" class="sidenav">
+        <div runat="server" class="sidenav">
             <img style="width: 100%; padding: 15px;" src="Images/cargohub-logo.png" />
-            <a runat="server" href="~/Orders">Orders</a>
-            <a runat="server" href="~/Customers">Customers</a>
-            <a runat="server" href="~/Trucks">Trucks</a>
-            <a runat="server" href="~/Drivers">Drivers</a>
-            <a runat="server" href="~/Timesheet">Timesheet</a>
-            <a runat="server" href="~/Reporting">Reporting</a>
-            <a runat="server" href="~/Users">Users</a>
-            <a runat="server" href="~/Account">Account Settings</a>
-            <a runat="server" href="~/Logout">Log Out</a>
+            <div runat="server" id="divNotLoggedIn">
+                <a runat="server" href="~/Login">Log in</a>
+            </div>
+            <div runat="server" id="divSideMenuTop" style="height: 55%">
+                <a runat="server" href="~/Orders">Orders</a>
+                <a runat="server" href="~/Customers">Customers</a>
+                <a runat="server" href="~/Trucks">Trucks</a>
+                <a runat="server" href="~/Drivers">Drivers</a>
+                <a runat="server" href="~/Timesheet">Timesheet</a>
+                <a runat="server" href="~/Reporting">Reporting</a>
+            </div>
+            <div runat="server" id="divSideMenuBot" style="">
+                <a runat="server" href="~/Users">Users</a>
+                <a runat="server" href="~/Account">Account Settings</a>
+                <a runat="server" href="~/Logout">Log Out</a>
+            </div>
         </div>
 
         <div style="width: 85%; margin-left: 14%;" class="container body-content">
@@ -73,10 +80,11 @@
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0;
-        background-color: rgba(41, 41, 41, 1);
+        background-color: white;
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 20px;
         margin-right: 1%;
+        box-shadow: 5px 0px 8px #888888;
     }
 
         /* The navigation menu links */
@@ -90,14 +98,9 @@
 
             /* When you mouse over the navigation links, change their color */
             .sidenav a:hover {
-                color: #f1f1f1;
-                background-color: #808080;
-            }
-
-            /* When you mouse over the navigation links, change their color */
-            .sidenav a:active {
-                color: #f1f1f1;
-                background-color: #808080;
+                color: black;
+                background-color: #f1f1f1;
+                text-decoration: underline #FF7A38;
             }
 
     /* Style page content */

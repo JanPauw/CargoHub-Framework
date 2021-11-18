@@ -11,8 +11,7 @@ namespace prjXISD_ASP_Framework
     public partial class Login : System.Web.UI.Page
     {
         //Global Variables
-        private User loggedIn = null;
-        private User attempt = null;
+        User attempt = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -61,12 +60,35 @@ namespace prjXISD_ASP_Framework
             }
             #endregion
 
-            attempt.register();
+            Session["user"] = attempt.register();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            //Registration Input
+            string u_name = txtUsername.Text;
+            string p_name = txtPassword.Text;
+            string e_num = txtEmpNum.Text;
 
+            //New Register Attempt
+            attempt = new User(u_name, p_name, e_num);
+
+            Session["user"] = attempt.login();
+
+            if (Session["user"] == null)
+            {
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                txtEmpNum.Text = "";
+
+                Response.Redirect("Login.aspx?Auth=False");
+                alert("Invalid Login Details! Please try again.");
+                return;
+            }
+
+
+            Response.Redirect("Login.aspx?Auth=True");
+            return;
         }
 
         #region Validation (Mainly for empty Fields)

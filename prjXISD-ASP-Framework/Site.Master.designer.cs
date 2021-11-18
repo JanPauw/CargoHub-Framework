@@ -15,13 +15,31 @@ namespace prjXISD_ASP_Framework
     {
 
         /// <summary>
-        /// divSideMenu control.
+        /// divNotLoggedIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSideMenu;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNotLoggedIn;
+
+        /// <summary>
+        /// divSideMenuTop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSideMenuTop;
+
+        /// <summary>
+        /// divSideMenuBot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSideMenuBot;
 
         /// <summary>
         /// MainContent control.
