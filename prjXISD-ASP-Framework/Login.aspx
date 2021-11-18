@@ -23,6 +23,7 @@
 
     <style>
         #divLogin {
+            background-color: #333337;
             border: 0px solid #f1f1f1;
             border-radius: 15px;
             padding: 15px;
