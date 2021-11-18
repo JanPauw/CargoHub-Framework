@@ -219,6 +219,7 @@
     <Content Include="Images\cargohub-logo.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Notes.txt" />
     <Content Include="Orders.aspx" />
     <Content Include="Reporting.aspx" />
     <Content Include="Scripts\bootstrap.js" />

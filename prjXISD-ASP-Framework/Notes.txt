@@ -1,0 +1,7 @@
+﻿Site Colors: From Back to Front;
+
+1	#1E1E1E
+2	#252526
+3	#2D2D30
+4	#333337
+

@@ -16,7 +16,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-<body>
+<body style="background-color: #1E1E1E;">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -41,29 +41,30 @@
         <div runat="server" class="sidenav">
             <img style="width: 100%; padding: 15px;" src="Images/cargohub-logo.png" />
             <div runat="server" id="divNotLoggedIn">
-                <a id="login" runat="server" href="~/Login">Log in</a>
+                <a runat="server" id="login" href="~/Login">Log in</a>
             </div>
-            <div runat="server" id="divSideMenuTop" style="height: 55%">
-                <a id="orders" runat="server" href="~/Orders">Orders</a>
-                <a id="customers" runat="server" href="~/Customers">Customers</a>
-                <a id="trucks" runat="server" href="~/Trucks">Trucks</a>
-                <a id="drivers" runat="server" href="~/Drivers">Drivers</a>
-                <a id="timesheet" runat="server" href="~/Timesheet">Timesheet</a>
-                <a id="reporting" runat="server" href="~/Reporting">Reporting</a>
+            <div runat="server" id="divSideMenuTop" style="height: 50%">
+                <a runat="server" id="orders" href="~/Orders">Orders</a>
+                <a runat="server" id="customers" href="~/Customers">Customers</a>
+                <a runat="server" id="trucks" href="~/Trucks">Trucks</a>
+                <a runat="server" id="drivers" href="~/Drivers">Drivers</a>
+                <a runat="server" id="timesheet" href="~/Timesheet">Timesheet</a>
+                <a runat="server" id="reporting" href="~/Reporting">Reporting</a>
             </div>
             <div runat="server" id="divSideMenuBot" style="">
-                <a id="users" runat="server" href="~/Users">Users</a>
-                <a id="account" runat="server" href="~/Account">Account Settings</a>
-                <a id="logout" runat="server" href="~/Logout">Log Out</a>
+                <a runat="server" id="users" href="~/Users">Users</a>
+                <a runat="server" id="account" href="~/Account">Account Settings</a>
+                <a runat="server" id="logout" href="~/Logout">Log Out</a>
             </div>
         </div>
 
         <div style="width: 85%; margin-left: 14%;" class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <hr />
+                <p style="color: white;">&copy; <%: DateTime.Now.Year %> - CargoHub by DevHub</p>
             </footer>
         </div>
 
@@ -80,28 +81,30 @@
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0;
-        background-color: white;
+        background-color: #252526;
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 20px;
         margin-right: 1%;
-        box-shadow: 5px 0px 8px #888888;
+        box-shadow: 5px 0px 10px black;
     }
 
         /* The navigation menu links */
         .sidenav a {
+            margin-top: 10px;
             padding: 6px 8px 6px 16px;
             text-decoration: none;
             font-size: 25px;
             color: #818181;
             display: block;
+            background-color: #1E1E1E;
         }
 
             /* When you mouse over the navigation links, change their color */
             .sidenav a:hover {
-                color: black;
-                background-color: #f1f1f1;
+                color: white;
+                background-color: #2D2D30;
                 text-decoration: underline #FF7A38;
-                box-shadow: 0px 0px 10px #888888;
+                box-shadow: 0px 0px 10px #FF7A38;
             }
 
     /* Style page content */
@@ -119,5 +122,21 @@
             .sidenav a {
                 font-size: 18px;
             }
+    }
+
+    hr {
+        border: 1px solid #FF7A38;
+        box-shadow: 0px 0px 5px #FF7A38;
+    }
+
+    h1 {
+        color: white;
+        text-decoration: underline #FF7A38;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 85%;
     }
 </style>

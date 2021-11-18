@@ -4,9 +4,9 @@
 
     <style>
         #orders {
-            color: black !important;
-            background-color: #f1f1f1 !important;
-            text-decoration: underline #FF7A38 !important;
+            color: white;
+            background-color: #2D2D30;
+            text-decoration: underline #FF7A38;
             box-shadow: 0px 0px 10px #FF7A38;
         }
     </style>
