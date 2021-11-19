@@ -39,22 +39,22 @@
         </asp:ScriptManager>
 
         <div runat="server" class="sidenav">
-            <img style="width: 100%; padding: 15px;" src="Images/cargohub-logo.png" />
+            <img style="width: 100%; padding: 15px;" src="../../Images/cargohub-logo.png" />
             <div runat="server" id="divNotLoggedIn">
-                <a runat="server" id="login" href="~/Login">Log in</a>
+                <a runat="server" id="login" href="/Index/Login">Log in</a>
             </div>
             <div runat="server" id="divSideMenuTop" style="height: 50%">
-                <a runat="server" id="orders" href="~/Orders">Orders</a>
-                <a runat="server" id="customers" href="~/Customers">Customers</a>
-                <a runat="server" id="trucks" href="~/Trucks">Trucks</a>
-                <a runat="server" id="drivers" href="~/Drivers">Drivers</a>
-                <a runat="server" id="timesheet" href="~/Timesheet">Timesheet</a>
-                <a runat="server" id="reporting" href="~/Reporting">Reporting</a>
+                <a runat="server" id="orders" href="/Index/Orders/Orders.aspx">Orders</a>
+                <a runat="server" id="customers" href="Index/Customers/Customers">Customers</a>
+                <a runat="server" id="trucks" href="Index/Trucks/Trucks">Trucks</a>
+                <a runat="server" id="drivers" href="Index/Drivers/Drivers">Drivers</a>
+                <a runat="server" id="timesheet" href="Index/Timesheet/Timesheet">Timesheet</a>
+                <a runat="server" id="reporting" href="Index/Reporting/Reporting">Reporting</a>
             </div>
             <div runat="server" id="divSideMenuBot" style="">
-                <a runat="server" id="users" href="~/Users">Users</a>
-                <a runat="server" id="account" href="~/Account">Account Settings</a>
-                <a runat="server" id="logout" href="~/Logout">Log Out</a>
+                <a runat="server" id="users" href="Index/Users/Users">Users</a>
+                <a runat="server" id="account" href="Index/Account/Account">Account Settings</a>
+                <a runat="server" id="logout" href="Index/Logout">Log Out</a>
             </div>
         </div>
 

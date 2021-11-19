@@ -21,11 +21,11 @@ namespace prjXISD_ASP_Framework
             divNotLoggedIn.Visible = true;
 
             //Not the Login Page
-            if (path != "/Login")
+            if (path != "/Index/Login")
             {
                 if (Session["user"] == null) //if not logged in
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("/Index/Login");
                     return;
                 }
                 else
@@ -36,11 +36,11 @@ namespace prjXISD_ASP_Framework
                 }
             }
 
-            if (path == "/Login")
+            if (path == "/Index/Login")
             {
                 if (Session["user"] != null) //if logged in
                 {
-                    Response.Redirect("Orders.aspx");
+                    Response.Redirect("/Index/Orders/Orders");
                     return;
                 }
             }
