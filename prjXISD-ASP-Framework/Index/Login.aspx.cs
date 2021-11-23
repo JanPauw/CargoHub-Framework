@@ -99,6 +99,7 @@ namespace prjXISD_ASP_Framework
         public void alert(string message)
         {
             Response.Write($"<script>alert('{message}')</script>");
+            return;
         }
     }
 }

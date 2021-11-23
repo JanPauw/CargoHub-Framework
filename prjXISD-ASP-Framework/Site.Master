@@ -129,7 +129,7 @@
         box-shadow: 0px 0px 5px #FF7A38;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
         color: white;
         text-decoration: underline #FF7A38;
         margin: 0;

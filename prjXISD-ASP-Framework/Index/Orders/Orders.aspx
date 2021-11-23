@@ -23,40 +23,7 @@
                                             </p>
                                         </div>
                                         <div style="width: 45%; float: right;">
-                                            <a href="../../Index/Orders/Order_Add">
-                                                <img src="../../Images/info-icon.png" /></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <a href="../../Index/Orders/Order_Add">
-                                                <img src="../../Images/info-icon.png" /></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <a href="../../Index/Orders/Order_Add">
-                                                <img src="../../Images/info-icon.png" /></a>
+                                            <img src="../../Images/info-icon.png" />
                                         </div>
                                     </div>
                                 </li>
@@ -70,98 +37,7 @@
                         <h2>Assigned Orders</h2>
                         <div class="listDiv">
                             <%-- Item List | START | --%>
-                            <ul>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+
                             <%-- Item List | STOP | --%>
                         </div>
                     </center>
@@ -171,107 +47,39 @@
                         <h2>Complete Orders</h2>
                         <div class="listDiv">
                             <%-- Item List | START | --%>
-                            <ul>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <a href="../../Index/Orders/Order_Add">
-                                                <img src="../../Images/info-icon.png" /></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                            <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+
                             <%-- Item List | STOP | --%>
                         </div>
                     </center>
                 </div>
             </div>
         </center>
+        <asp:Button CssClass="aspButton" runat="server" ID="btnAddOrder" Text="Add Order" OnClick="btnAddOrder_Click" />
     </div>
     <style>
+        .aspButton {
+            font-size: 20px;
+            float: right;
+            color: white;
+            font-weight: bold;
+            background-color: #252526;
+            border: 2px solid #FF7A38;
+            border-radius: 10px;
+            width: 20%;
+            margin: 2%;
+            padding: 7px 5px 7px 5px;
+        }
+
+            .aspButton:hover {
+                background-color: black;
+                border: 2px solid #FF7A38;
+                border-radius: 10px;
+                width: 30%;
+                margin: 2%;
+                padding: 7px 5px 7px 5px;
+                box-shadow: 0px 0px 5px #FF7A38;
+            }
+
         /* Create three equal columns that floats next to each other */
         .column {
             float: left;
@@ -335,12 +143,16 @@
             box-shadow: 0px 0px 25px black;
         }
 
+            .listItem h3 {
+                margin-top: 7%;
+            }
+
             .listItem img {
                 float: right;
                 width: 30%;
                 padding: 0;
                 margin: 0;
-                margin-top: 12%;
+                margin-top: 10%;
                 margin-right: 10%;
             }
 

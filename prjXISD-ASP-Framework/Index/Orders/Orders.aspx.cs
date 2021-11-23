@@ -13,5 +13,11 @@ namespace prjXISD_ASP_Framework
         {
 
         }
+
+        protected void btnAddOrder_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../../Index/Orders/Add");
+            return;
+        }
     }
 }

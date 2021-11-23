@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="prjXISD_ASP_Framework.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="padding-top: 15%; ">
+    <div style="padding-top: 15%;">
         <center>
             <div id="divLogin" style="width: 30%;">
                 <h1>Login / Register</h1>
