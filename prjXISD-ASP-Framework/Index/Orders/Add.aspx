@@ -27,7 +27,6 @@
                                 <asp:DropDownList CssClass="aspTextBox" Width="100%" runat="server" ID="dropToDepot"></asp:DropDownList>
                                 <br />
                                 <br />
-                                <asp:Button CssClass="aspButton btnInDiv" runat="server" ID="btnSaveOrder" Text="Save" OnClick="btnSaveOrder_Click" />
                             </center>
                         </div>
                     </center>
@@ -71,7 +70,7 @@
 
         <center>
             <asp:Button CssClass="aspButton" runat="server" ID="btnCancel" Text="< Back" OnClick="btnCancel_Click" />
-            <asp:Button CssClass="aspButton" runat="server" ID="btnAddOrder" Text="Add Order" />
+            <asp:Button CssClass="aspButton" runat="server" ID="btnAddOrder" Text="Add Order" OnClick="btnAddOrder_Click" />
         </center>
     </div>
 

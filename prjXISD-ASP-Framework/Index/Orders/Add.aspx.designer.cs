@@ -60,15 +60,6 @@ namespace prjXISD_ASP_Framework.Index.Orders
         protected global::System.Web.UI.WebControls.DropDownList dropToDepot;
 
         /// <summary>
-        /// btnSaveOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveOrder;
-
-        /// <summary>
         /// dropCustomer control.
         /// </summary>
         /// <remarks>
