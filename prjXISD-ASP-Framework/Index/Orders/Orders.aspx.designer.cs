@@ -24,6 +24,33 @@ namespace prjXISD_ASP_Framework
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOrders;
 
         /// <summary>
+        /// ordersNA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ordersNA;
+
+        /// <summary>
+        /// ordersA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ordersA;
+
+        /// <summary>
+        /// ordersC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ordersC;
+
+        /// <summary>
         /// btnAddOrder control.
         /// </summary>
         /// <remarks>

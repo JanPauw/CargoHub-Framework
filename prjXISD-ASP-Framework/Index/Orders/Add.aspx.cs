@@ -137,6 +137,18 @@ namespace prjXISD_ASP_Framework.Index.Orders
                 return;
             }
 
+            //Check if Quantity is entered correctly
+            try
+            {
+                int test = Convert.ToInt32(txtCargoWeight.Text);
+            }
+            catch (Exception)
+            {
+                alert("Invalid Cargo Quantity!");
+                txtCargoWeight.Focus();
+                return;
+            }
+
             Order oTemp = new Order();
 
             oTemp.ordNum = orders.OrderNumGen(customer.custName);
@@ -152,6 +164,7 @@ namespace prjXISD_ASP_Framework.Index.Orders
             #endregion
 
             alert("Sucess | Order has been added to the Database!");
+            Response.Redirect("/Index/Orders/Orders");
             return;
         }
 

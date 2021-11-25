@@ -9,25 +9,9 @@
                 <div class="OrderDiv column">
                     <center>
                         <h2>Un-assigned Orders</h2>
-                        <div class="listDiv">
+                        <div runat="server" id="ordersNA" class="listDiv">
                             <%-- Item List | START | --%>
-                            <ul>
-                                <li>
-                                    <div class="listItem">
-                                        <div style="width: 45%; display: inline-block">
-                                            <h3>Order: JP001</h3>
-                                            <p>
-                                                From: Port Elizabeth
-                                                <br />
-                                                To: Durban
-                                            </p>
-                                        </div>
-                                        <div style="width: 45%; float: right;">
-                                            <img src="../../Images/info-icon.png" />
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            
                             <%-- Item List | STOP | --%>
                         </div>
                     </center>
@@ -35,7 +19,7 @@
                 <div class="OrderDiv column">
                     <center>
                         <h2>Assigned Orders</h2>
-                        <div class="listDiv">
+                        <div runat="server" id="ordersA" class="listDiv">
                             <%-- Item List | START | --%>
 
                             <%-- Item List | STOP | --%>
@@ -45,7 +29,7 @@
                 <div class="OrderDiv column">
                     <center>
                         <h2>Complete Orders</h2>
-                        <div class="listDiv">
+                        <div runat="server" id="ordersC" class="listDiv">
                             <%-- Item List | START | --%>
 
                             <%-- Item List | STOP | --%>
@@ -149,10 +133,10 @@
 
             .listItem img {
                 float: right;
-                width: 30%;
+                width: 50%;
                 padding: 0;
                 margin: 0;
-                margin-top: 10%;
+                margin-top: 15%;
                 margin-right: 10%;
             }
 
