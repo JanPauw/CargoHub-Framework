@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace prjXISD_ASP_Framework
+namespace prjXISD_ASP_Framework.Index.Customers
 {
 
 
-    public partial class Customers
+    public partial class Add
     {
 
         /// <summary>
@@ -22,15 +22,6 @@ namespace prjXISD_ASP_Framework
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOrders;
-
-        /// <summary>
-        /// divCustList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCustList;
 
         /// <summary>
         /// tblDetails control.
@@ -87,31 +78,13 @@ namespace prjXISD_ASP_Framework
         protected global::System.Web.UI.WebControls.TextBox txtCustNum;
 
         /// <summary>
-        /// btnDelete control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
-
-        /// <summary>
-        /// btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-
-        /// <summary>
-        /// divOrderList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOrderList;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
 
         /// <summary>
         /// btnAddCust control.

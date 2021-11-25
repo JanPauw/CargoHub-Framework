@@ -18,7 +18,7 @@
                                             <h3>Order: JP001</h3>
                                             <p>
                                                 From: Port Elizabeth
-                                            <br />
+                                                <br />
                                                 To: Durban
                                             </p>
                                         </div>

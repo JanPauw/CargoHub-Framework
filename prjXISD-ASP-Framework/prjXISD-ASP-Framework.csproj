@@ -195,6 +195,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\cargohub-icon.ico" />
     <Content Include="Images\info-icon.png" />
     <Content Include="Index\Account\Account.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -202,6 +203,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Index\Customers\Add.aspx" />
     <Content Include="Index\Customers\Customers.aspx" />
     <Content Include="Index\Drivers\Drivers.aspx" />
     <Content Include="favicon.ico" />
@@ -271,6 +273,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Index\Customers\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\Customers\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index\Customers\Customers.aspx.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

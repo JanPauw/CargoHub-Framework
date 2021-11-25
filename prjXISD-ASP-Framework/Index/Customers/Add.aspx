@@ -1,81 +1,105 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="prjXISD_ASP_Framework.Index.Orders.Add" %>
+﻿<%@ Page Title="Add Customer" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="prjXISD_ASP_Framework.Index.Customers.Add" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="height: 100%">
-        <h1>Orders > Add</h1>
+        <h1>Customers > Add</h1>
         <br />
         <center>
             <div class="row" runat="server" id="divOrders">
                 <div class="OrderDiv column">
                     <center>
-                        <h2>Cargo Details</h2>
-                        <div class="listDiv">
-                            <table runat="server" id="tblOrderDetails" style="width: 95%; margin-top: 10px">
+                        <h2>Customer Details</h2>
+                        <div class="listDiv" style="overflow-y: auto">
+                            <table runat="server" id="tblDetails" style="width: 90%; margin-top: 10px">
                                 <tr>
                                     <td>
-                                        <h3>Cargo Description</h3>
-                                    </td>
-                                    <td>
-                                        <h3>Cargo Quantity (KG)</h3>
+                                        <h3>Name</h3>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:TextBox AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="txtCargoDesc" TextMode="MultiLine" OnTextChanged="txtCargoDesc_TextChanged"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:TextBox AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="txtCargoWeight" OnTextChanged="txtCargoWeight_TextChanged"></asp:TextBox>
+                                        <asp:TextBox CssClass="aspTextBox" Width="100%" runat="server" ID="txtCustName"></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <h3>From (Depot)</h3>
+                                        <h3>Address</h3>
                                     </td>
                                     <td>
-                                        <h3>To (Depot)</h3>
+                                        <h3>Province</h3>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:DropDownList AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="dropFromDepot" OnTextChanged="dropFromDepot_SelectedIndexChanged"></asp:DropDownList>
+                                        <asp:TextBox CssClass="aspTextBox textArea" Width="100%" runat="server" ID="txtAddress" TextMode="MultiLine"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:DropDownList AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="dropToDepot" OnTextChanged="dropToDepot_SelectedIndexChanged"></asp:DropDownList>
+                                        <asp:DropDownList CssClass="aspTextBox" Width="100%" runat="server" ID="dropProvince"></asp:DropDownList>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3>Email</h3>
+                                    </td>
+                                    <td>
+                                        <h3>Phone Number</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:TextBox CssClass="aspTextBox" Width="100%" runat="server" ID="txtCustEmail"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox CssClass="aspTextBox" Width="100%" runat="server" ID="txtCustNum"></asp:TextBox>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                     </center>
                 </div>
-                <div class="OrderDiv column">
-                    <center>
-                        <h2>Customers</h2>
-                        <div runat="server" id="divCustomers" class="listDiv">
-                        </div>
-                    </center>
-                </div>
             </div>
         </center>
-
         <center>
-            <asp:Button CssClass="aspButton" runat="server" ID="btnCancel" Text="< Back" OnClick="btnCancel_Click" OnClientClick="return confirm('You are leaving this page! Any Unsaved data will be lost.');" />
-            <asp:Button CssClass="aspButton" runat="server" ID="btnAddOrder" Text="Add Order" OnClick="btnAddOrder_Click" />
+            <asp:Button CssClass="aspButton btnCancel" runat="server" ID="btnCancel" Text="< Back" OnClick="btnCancel_Click" OnClientClick="return confirm('You are leaving this page! Any Unsaved data will be lost.');" />
+            <asp:Button CssClass="aspButton btnAddCust" runat="server" ID="btnAddCust" Text="Add Customer" OnClick="btnAddCust_Click" />
         </center>
     </div>
-
     <style>
+        .btnAddCust {
+        }
+
+            .btnAddCust:hover {
+                color: green;
+            }
+
+        .btnCancel {
+        }
+
+            .btnCancel:hover {
+                color: red !important;
+            }
+
         td {
             width: 49%;
             vertical-align: top;
             padding: 5px;
         }
 
-        #orders {
-            color: white;
-            background-color: #2D2D30;
-            text-decoration: underline #FF7A38;
-            box-shadow: 0px 0px 10px #FF7A38;
+        .aspTextBox {
+            width: 45%;
+            background-color: white;
+            border-color: black;
+            text-align: left;
+            margin-top: 1%;
+            padding: 10px 5px 10px 10px;
+            border-radius: 15px;
         }
+
+            .aspTextBox:focus {
+                margin-top: 1%;
+                border-radius: 15px;
+                box-shadow: 0px 0px 15px #FF7A38;
+            }
 
         .aspButton {
             font-size: 20px;
@@ -84,7 +108,7 @@
             background-color: #252526;
             border: 2px solid #FF7A38;
             border-radius: 10px;
-            width: 20%;
+            width: 35%;
             margin: 2%;
             padding: 7px 5px 7px 5px;
         }
@@ -93,52 +117,6 @@
                 background-color: black;
                 border: 2px solid #FF7A38;
                 border-radius: 10px;
-                width: 30%;
-                margin: 2%;
-                padding: 7px 5px 7px 5px;
-                box-shadow: 0px 0px 5px #FF7A38;
-            }
-
-        .aspTextBox {
-            width: 45%;
-            background-color: white;
-            border-color: black;
-            text-align: center;
-            margin-top: 1%;
-            padding: 10px 5px 10px 5px;
-            border-radius: 15px;
-        }
-
-            .aspTextBox .textArea {
-                text-align: left;
-            }
-
-            .aspTextBox:focus {
-                text-align: center;
-                margin-top: 1%;
-                padding: 10px 5px 10px 5px;
-                border-radius: 15px;
-                box-shadow: 0px 0px 15px #FF7A38;
-            }
-
-        .btnInDiv {
-            float: right;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-            background-color: #252526;
-            border: 2px solid #FF7A38;
-            border-radius: 10px;
-            width: 30%;
-            margin: 2%;
-            padding: 7px 5px 7px 5px;
-        }
-
-            .btnInDiv:hover {
-                background-color: black;
-                border: 2px solid #FF7A38;
-                border-radius: 10px;
-                width: 30%;
                 margin: 2%;
                 padding: 7px 5px 7px 5px;
                 box-shadow: 0px 0px 5px #FF7A38;
@@ -148,8 +126,8 @@
         .column {
             float: left;
             width: 32.3333%;
-            margin-left: 0.5%;
-            margin-right: 0.5%;
+            margin-left: 33.8333%;
+            margin-right: 33.8333%;
             padding: 15px;
         }
 
@@ -160,7 +138,7 @@
             clear: both;
         }
 
-        #orders {
+        #customers {
             color: white;
             background-color: #2D2D30;
             text-decoration: underline #FF7A38;
@@ -168,7 +146,6 @@
         }
 
         .OrderDiv {
-            margin-left: 11.5%;
             background-color: #333337;
             border: 0px solid #f1f1f1;
             border-radius: 10px;
