@@ -58,7 +58,9 @@ namespace prjXISD_ASP_Framework
                 sb.Append($"</p>");
                 sb.Append("</div>");
                 sb.Append("<div style=\"width: 30%; float: right;\">");
+                sb.Append($"<a href=\"/Index/Orders/Info?ordNum={o.ordNum}\">");
                 sb.Append("<img src=\"../../Images/info-icon.png\" />");
+                sb.Append("</a>");
                 sb.Append("</div>");
                 sb.Append("</div>");
                 sb.Append("</li>");
@@ -94,7 +96,9 @@ namespace prjXISD_ASP_Framework
                 sb.Append($"</p>");
                 sb.Append("</div>");
                 sb.Append("<div style=\"width: 30%; float: right;\">");
+                sb.Append($"<a href=\"/Index/Orders/Info?ordNum={o.ordNum}\">");
                 sb.Append("<img src=\"../../Images/info-icon.png\" />");
+                sb.Append("</a>");
                 sb.Append("</div>");
                 sb.Append("</div>");
                 sb.Append("</li>");
@@ -130,7 +134,9 @@ namespace prjXISD_ASP_Framework
                 sb.Append($"</p>");
                 sb.Append("</div>");
                 sb.Append("<div style=\"width: 30%; float: right;\">");
+                sb.Append($"<a href=\"/Index/Orders/Info?ordNum={o.ordNum}\">");
                 sb.Append("<img src=\"../../Images/info-icon.png\" />");
+                sb.Append("</a>");
                 sb.Append("</div>");
                 sb.Append("</div>");
                 sb.Append("</li>");
