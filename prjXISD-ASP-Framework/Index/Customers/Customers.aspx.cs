@@ -191,6 +191,7 @@ namespace prjXISD_ASP_Framework
             Response.Write($"<script>alert('{message}')</script>");
         }
 
+        //Save Changes made to User Details
         protected void btnSave_Click(object sender, EventArgs e)
         {
             //Get selected Cust ID from URL passthrough
@@ -209,6 +210,7 @@ namespace prjXISD_ASP_Framework
             customers.UpdateCustomer(cTemp);
         }
 
+        //Delete the selected User
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             //Get selected Cust ID from URL passthrough

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace prjXISD_ASP_Framework
+namespace prjXISD_ASP_Framework.Index.Users
 {
 
 
-    public partial class Users
+    public partial class Add
     {
 
         /// <summary>
@@ -22,24 +22,6 @@ namespace prjXISD_ASP_Framework
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOrders;
-
-        /// <summary>
-        /// divUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divUsers;
-
-        /// <summary>
-        /// divCustomers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCustomers;
 
         /// <summary>
         /// tblDetails control.
@@ -78,6 +60,15 @@ namespace prjXISD_ASP_Framework
         protected global::System.Web.UI.WebControls.TextBox txtEmpNum;
 
         /// <summary>
+        /// btnGenNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenNum;
+
+        /// <summary>
         /// selRoles control.
         /// </summary>
         /// <remarks>
@@ -87,30 +78,21 @@ namespace prjXISD_ASP_Framework
         protected global::System.Web.UI.HtmlControls.HtmlSelect selRoles;
 
         /// <summary>
-        /// btnDelete control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
 
         /// <summary>
-        /// btnSave control.
+        /// btnAddCust control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
-
-        /// <summary>
-        /// btnAddUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddUser;
+        protected global::System.Web.UI.WebControls.Button btnAddCust;
     }
 }

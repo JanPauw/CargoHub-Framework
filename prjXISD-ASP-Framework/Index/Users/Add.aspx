@@ -1,22 +1,15 @@
-﻿<%@ Page Title="Users" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="prjXISD_ASP_Framework.Users" %>
+﻿<%@ Page Title="Add Employee" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="prjXISD_ASP_Framework.Index.Users.Add" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="height: 100%">
-        <h1>Users / Employees</h1>
+        <h1>Users > Add</h1>
         <br />
         <center>
             <div class="row" runat="server" id="divOrders">
-                <div class="UserDiv column">
+                <div class="OrderDiv column">
                     <center>
-                        <h2>User List</h2>
-                        <div runat="server" id="divUsers" class="listDiv">
-                        </div>
-                    </center>
-                </div>
-                <div class="UserDiv column">
-                    <center>
-                        <h2>User Details</h2>
-                        <div runat="server" id="divCustomers" class="listDiv">
+                        <h2>Employee Details</h2>
+                        <div class="listDiv" style="overflow-y: auto">
                             <table runat="server" id="tblDetails" style="width: 90%; margin-top: 10px">
                                 <tr>
                                     <td>
@@ -38,14 +31,23 @@
                                     <td>
                                         <h3>Employee Number</h3>
                                     </td>
-                                    <td>
-                                        <h3>User Role</h3>
-                                    </td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtEmpNum" runat="server" ReadOnly="True"></asp:TextBox>
                                     </td>
+                                    <td style="vertical-align: middle">
+                                        <asp:Button CssClass="aspButton btnGenNum" runat="server" ID="btnGenNum" Text="Generate" OnClick="btnGenNum_Click" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3>User Role</h3>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td>
                                         <select runat="server" id="selRoles" class="aspTextBox" style="width: 100%">
                                             <option value="Admin">Admin</option>
@@ -56,60 +58,61 @@
                                             <option value="Trip/Usage Manager">Trip/Usage Manager</option>
                                         </select>
                                     </td>
+                                    <td></td>
                                 </tr>
                             </table>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <asp:Button CssClass="aspButton btnDelete" ID="btnDelete" runat="server" Text="Delete User" OnClientClick="return confirm('You are deleting this User profile! Continue?');" OnClick="btnDelete_Click" />
-                            <asp:Button CssClass="aspButton btnSave" ID="btnSave" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
                         </div>
                     </center>
                 </div>
             </div>
         </center>
-
-        <asp:Button CssClass="aspButton btnAddUser" runat="server" ID="btnAddUser" Text="Add Employee" OnClick="btnAddUser_Click" />
-
+        <center>
+            <asp:Button CssClass="aspButton btnCancel" runat="server" ID="btnCancel" Text="< Back" OnClientClick="return confirm('You are leaving this page! Any Unsaved data will be lost.');" OnClick="btnCancel_Click" />
+            <asp:Button CssClass="aspButton btnAddCust" runat="server" ID="btnAddCust" Text="Add Employee" OnClick="btnAddCust_Click" />
+        </center>
     </div>
-
     <style>
-        .btnSave {
-            float: right;
-            margin-right: 15px !important;
+        .btnGenNum {
+            width: 100% !important;
+            float: left !important;
+            margin: 0 !important;
         }
 
-            .btnSave:hover {
-                color: green !important;
+        .btnAddCust {
+        }
+
+            .btnAddCust:hover {
+                color: green;
             }
 
-        .btnDelete {
-            float: left;
-            margin-left: 15px !important;
+        .btnCancel {
         }
 
-            .btnDelete:hover {
+            .btnCancel:hover {
                 color: red !important;
             }
-
-        .btnAddUser {
-            float: right !important;
-        }
 
         td {
             width: 49%;
             vertical-align: top;
             padding: 5px;
         }
+
+        .aspTextBox {
+            width: 45%;
+            background-color: white;
+            border-color: black;
+            text-align: left;
+            margin-top: 1%;
+            padding: 10px 5px 10px 10px;
+            border-radius: 15px;
+        }
+
+            .aspTextBox:focus {
+                margin-top: 1%;
+                border-radius: 15px;
+                box-shadow: 0px 0px 15px #FF7A38;
+            }
 
         .aspButton {
             font-size: 20px;
@@ -118,68 +121,15 @@
             background-color: #252526;
             border: 2px solid #FF7A38;
             border-radius: 10px;
-            width: 40%;
+            width: 35%;
             margin: 2%;
             padding: 7px 5px 7px 5px;
-            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-            outline: 1px solid;
-            outline-color: rgb(255, 122, 56, .5);
-            outline-offset: 0px;
-            text-shadow: none;
-            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
         }
 
             .aspButton:hover {
                 background-color: black;
                 border: 2px solid #FF7A38;
                 border-radius: 10px;
-                margin: 2%;
-                padding: 7px 5px 7px 5px;
-                box-shadow: 0 0 20px rgba(255, 255, 255, .2);
-                outline-color: rgb(255, 122, 56, .0);
-                outline-offset: 15px;
-            }
-
-        .aspTextBox {
-            width: 45%;
-            background-color: white;
-            border-color: black;
-            text-align: center;
-            margin-top: 1%;
-            padding: 10px 5px 10px 5px;
-            border-radius: 15px;
-        }
-
-            .aspTextBox .textArea {
-                text-align: left;
-            }
-
-            .aspTextBox:focus {
-                text-align: center;
-                margin-top: 1%;
-                padding: 10px 5px 10px 5px;
-                border-radius: 15px;
-                box-shadow: 0px 0px 15px #FF7A38;
-            }
-
-        .btnInDiv {
-            float: right;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-            background-color: #252526;
-            border: 2px solid #FF7A38;
-            border-radius: 10px;
-            width: 30%;
-            margin: 2%;
-            padding: 7px 5px 7px 5px;
-        }
-
-            .btnInDiv:hover {
-                background-color: black;
-                border: 2px solid #FF7A38;
-                border-radius: 10px;
-                width: 30%;
                 margin: 2%;
                 padding: 7px 5px 7px 5px;
                 box-shadow: 0px 0px 5px #FF7A38;
@@ -189,8 +139,8 @@
         .column {
             float: left;
             width: 32.3333%;
-            margin-left: 0.5%;
-            margin-right: 0.5%;
+            margin-left: 33.8333%;
+            margin-right: 33.8333%;
             padding: 15px;
         }
 
@@ -201,15 +151,14 @@
             clear: both;
         }
 
-        #users {
+        #customers {
             color: white;
             background-color: #2D2D30;
             text-decoration: underline #FF7A38;
             box-shadow: 0px 0px 10px #FF7A38;
         }
 
-        .UserDiv {
-            margin-left: 11.5%;
+        .OrderDiv {
             background-color: #333337;
             border: 0px solid #f1f1f1;
             border-radius: 10px;
@@ -217,9 +166,9 @@
         }
 
         .listDiv {
-            overflow-y: auto;
+            overflow-y: scroll;
             padding-top: 3px;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             height: 57vh;
             background-color: #333337;
             border: 0px solid #f1f1f1;
@@ -236,7 +185,7 @@
 
             .listDiv li {
                 margin-top: 15px;
-                width: 95%;
+                width: 90%;
             }
 
         .listItem {
