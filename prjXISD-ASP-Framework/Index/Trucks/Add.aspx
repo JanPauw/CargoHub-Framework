@@ -1,25 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Trucks.aspx.cs" Inherits="prjXISD_ASP_Framework.Trucks" %>
+﻿<%@ Page Title="Add a Truck" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="prjXISD_ASP_Framework.Index.Trucks.Add" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div style="height: 100%">
-        <h1>Trucks</h1>
+        <h1>Trucks > Add</h1>
         <br />
         <center>
             <div class="row" runat="server" id="divOrders">
                 <div class="OrderDiv column">
                     <center>
-                        <h2>Trucks</h2>
-                        <div runat="server" id="divTrucks" class="listDiv">
-                            <%-- Item List | START | --%>
-
-                            <%-- Item List | STOP | --%>
-                        </div>
-                    </center>
-                </div>
-                <div class="OrderDiv column">
-                    <center>
                         <h2>Truck Details</h2>
-                        <div runat="server" id="divDetails" class="listDiv">
+                        <div class="listDiv" style="overflow-y: auto">
                             <table runat="server" id="tblDetails" style="width: 90%; margin-top: 10px">
                                 <tr>
                                     <td>
@@ -91,9 +81,32 @@
                 </div>
             </div>
         </center>
-        <asp:Button CssClass="aspButton" runat="server" ID="btnAddTruck" Text="Add Truck" />
+        <center>
+            <asp:Button CssClass="aspButton btnCancel" runat="server" ID="btnCancel" Text="< Back" OnClientClick="return confirm('You are leaving this page! Any Unsaved data will be lost.');" OnClick="btnCancel_Click" />
+            <asp:Button CssClass="aspButton btnAddTruck" runat="server" ID="btnAddTruck" Text="Add Truck" OnClick="btnAddTruck_Click" />
+        </center>
     </div>
     <style>
+        .btnAddTruck {
+        }
+
+            .btnAddTruck:hover {
+                color: green;
+            }
+
+        .btnCancel {
+        }
+
+            .btnCancel:hover {
+                color: red !important;
+            }
+
+        td {
+            width: 49%;
+            vertical-align: top;
+            padding: 5px;
+        }
+
         .aspTextBox {
             width: 45%;
             background-color: white;
@@ -110,21 +123,14 @@
                 box-shadow: 0px 0px 15px #FF7A38;
             }
 
-        td {
-            width: 49%;
-            vertical-align: top;
-            padding: 5px;
-        }
-
         .aspButton {
             font-size: 20px;
-            float: right;
             color: white;
             font-weight: bold;
             background-color: #252526;
             border: 2px solid #FF7A38;
             border-radius: 10px;
-            width: 20%;
+            width: 35%;
             margin: 2%;
             padding: 7px 5px 7px 5px;
         }
@@ -133,7 +139,6 @@
                 background-color: black;
                 border: 2px solid #FF7A38;
                 border-radius: 10px;
-                width: 30%;
                 margin: 2%;
                 padding: 7px 5px 7px 5px;
                 box-shadow: 0px 0px 5px #FF7A38;
@@ -143,8 +148,8 @@
         .column {
             float: left;
             width: 32.3333%;
-            margin-left: 0.5%;
-            margin-right: 0.5%;
+            margin-left: 33.8333%;
+            margin-right: 33.8333%;
             padding: 15px;
         }
 
@@ -163,7 +168,6 @@
         }
 
         .OrderDiv {
-            margin-left: 11.5%;
             background-color: #333337;
             border: 0px solid #f1f1f1;
             border-radius: 10px;
@@ -171,7 +175,7 @@
         }
 
         .listDiv {
-            overflow-y: auto;
+            overflow-y: scroll;
             padding-top: 3px;
             padding-bottom: 15px;
             height: 57vh;
@@ -194,26 +198,17 @@
             }
 
         .listItem {
-            padding-left: 15px;
+            padding: 3%;
             text-align: left;
             color: white;
             background-color: #333337;
             border: 0px solid #f1f1f1;
             border-radius: 10px;
-            box-shadow: 0px 0px 25px black;
+            box-shadow: 0px 0px 15px black;
         }
 
             .listItem h3 {
-                margin-top: 7%;
-            }
-
-            .listItem img {
-                float: right;
-                width: 50%;
-                padding: 0;
                 margin: 0;
-                margin-top: 15%;
-                margin-right: 10%;
             }
 
             .listItem:hover {

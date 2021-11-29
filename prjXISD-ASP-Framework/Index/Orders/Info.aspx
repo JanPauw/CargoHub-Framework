@@ -6,81 +6,108 @@
         <br />
         <center>
             <div class="row" runat="server" id="divOrders">
-                <div class="OrderDiv column">
-                    <center>
-                        <h2>Cargo Details</h2>
-                        <div class="listDiv">
-                            <table runat="server" id="tblOrderDetails" style="width: 95%; margin-top: 10px">
-                                <tr>
-                                    <td>
-                                        <h3>Cargo Description</h3>
-                                    </td>
-                                    <td>
-                                        <h3>Cargo Quantity (KG)</h3>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="txtCargoDesc" TextMode="MultiLine"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:TextBox AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="txtCargoWeight"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h3>From (Depot)</h3>
-                                    </td>
-                                    <td>
-                                        <h3>To (Depot)</h3>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <select class="aspTextBox" runat="server" id="fromDepot" style="width: 100%">
-                                            <option value="Eastern Cape">Eastern Cape</option>
-                                            <option value="Free State">Free State</option>
-                                            <option value="Gauteng">Gauteng</option>
-                                            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
-                                            <option value="Limpopo">Limpopo</option>
-                                            <option value="Mpumulanga">Mpumulanga</option>
-                                            <option value="Northern Cape">Northern Cape</option>
-                                            <option value="North West">North West</option>
-                                            <option value="Western Cape">Western Cape</option>
-                                        </select>
-                                        <%--<asp:DropDownList AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="dropFromDepot"></asp:DropDownList>--%>
-                                    </td>
-                                    <td>
-                                        <select class="aspTextBox" runat="server" id="toDepot" style="width: 100%">
-                                            <option value="Eastern Cape">Eastern Cape</option>
-                                            <option value="Free State">Free State</option>
-                                            <option value="Gauteng">Gauteng</option>
-                                            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
-                                            <option value="Limpopo">Limpopo</option>
-                                            <option value="Mpumulanga">Mpumulanga</option>
-                                            <option value="Northern Cape">Northern Cape</option>
-                                            <option value="North West">North West</option>
-                                            <option value="Western Cape">Western Cape</option>
-                                        </select>
-                                        <%--<asp:DropDownList AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="dropToDepot"></asp:DropDownList>--%>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div id="map">
+                <center>
+                    <div class="OrderDiv column">
+                        <center>
+                            <h2>Cargo Details</h2>
+                            <div class="listDiv">
+                                <table runat="server" id="tblOrderDetails" style="width: 95%; margin-top: 10px">
+                                    <tr>
+                                        <td>
+                                            <h3>Cargo Description</h3>
+                                        </td>
+                                        <td>
+                                            <h3>Cargo Quantity (KG)</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:TextBox AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="txtCargoDesc" TextMode="MultiLine"></asp:TextBox>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="txtCargoWeight"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3>From (Depot)</h3>
+                                        </td>
+                                        <td>
+                                            <h3>To (Depot)</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="aspTextBox" runat="server" id="fromDepot" style="width: 100%">
+                                                <option value="Eastern Cape">Eastern Cape</option>
+                                                <option value="Free State">Free State</option>
+                                                <option value="Gauteng">Gauteng</option>
+                                                <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                                                <option value="Limpopo">Limpopo</option>
+                                                <option value="Mpumulanga">Mpumulanga</option>
+                                                <option value="Northern Cape">Northern Cape</option>
+                                                <option value="North West">North West</option>
+                                                <option value="Western Cape">Western Cape</option>
+                                            </select>
+                                            <%--<asp:DropDownList AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="dropFromDepot"></asp:DropDownList>--%>
+                                        </td>
+                                        <td>
+                                            <select class="aspTextBox" runat="server" id="toDepot" style="width: 100%">
+                                                <option value="Eastern Cape">Eastern Cape</option>
+                                                <option value="Free State">Free State</option>
+                                                <option value="Gauteng">Gauteng</option>
+                                                <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                                                <option value="Limpopo">Limpopo</option>
+                                                <option value="Mpumulanga">Mpumulanga</option>
+                                                <option value="Northern Cape">Northern Cape</option>
+                                                <option value="North West">North West</option>
+                                                <option value="Western Cape">Western Cape</option>
+                                            </select>
+                                            <%--<asp:DropDownList AutoPostBack="true" CssClass="aspTextBox" Width="100%" runat="server" ID="dropToDepot"></asp:DropDownList>--%>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div id="warnings-panel"></div>
                             </div>
 
-                            <div id="warnings-panel"></div>
-                        </div>
+                        </center>
+                    </div>
+                    <div class="OrderDiv column">
+                        <center>
+                            <h2>Assign Driver</h2>
+                            <div runat="server" id="divCustomers" class="listDiv assDriver">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h3>Assign Driver</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select style="width: 100%" class="aspTextBox" runat="server" id="selDrivers"></select>
 
-                    </center>
-                </div>
-                <div class="OrderDiv column">
-                    <center>
-                        <h2>Customers</h2>
-                        <div runat="server" id="divCustomers" class="listDiv">
-                        </div>
-                    </center>
-                </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3>Update Status</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select style="width: 100%" class="aspTextBox" runat="server" id="selStatus">
+                                                <option value="Un-assigned">Un-Assigned</option>
+                                                <option value="Assigned">Assigned</option>
+                                                <option value="Completed">Completed</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <asp:Button Width="50%" CssClass="aspButton" Text="Update Order" runat="server" ID="btnUpdate" OnClick="btnUpdate_Click" />
+                        </center>
+                    </div>
+                </center>
             </div>
         </center>
 
@@ -91,6 +118,10 @@
     </div>
 
     <style>
+        .assDriver {
+            height: 49.8vh !important;
+        }
+
         td {
             width: 49%;
             vertical-align: top;
@@ -111,7 +142,7 @@
             background-color: #252526;
             border: 2px solid #FF7A38;
             border-radius: 10px;
-            width: 20%;
+            width: 30%;
             margin: 2%;
             padding: 7px 5px 7px 5px;
         }
@@ -120,7 +151,6 @@
                 background-color: black;
                 border: 2px solid #FF7A38;
                 border-radius: 10px;
-                width: 30%;
                 margin: 2%;
                 padding: 7px 5px 7px 5px;
                 box-shadow: 0px 0px 5px #FF7A38;

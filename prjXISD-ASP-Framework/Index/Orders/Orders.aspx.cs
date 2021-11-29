@@ -50,7 +50,7 @@ namespace prjXISD_ASP_Framework
                 sb.Append("<li>");
                 sb.Append("<div class=\"listItem\">");
                 sb.Append("<div style=\"width: 70%; display: inline-block\">");
-                sb.Append($"<h3>Order: {o.ordNum}</h3>");
+                sb.Append($"<h3 style=\"color: red;\">Order: {o.ordNum}</h3>");
                 sb.Append($"<p>");
                 sb.Append($"From: {o.fromDepot}");
                 sb.Append($"<br />");
@@ -71,7 +71,7 @@ namespace prjXISD_ASP_Framework
             ordersNA.InnerHtml = sb.ToString();
             #endregion
         }
-        
+
         //Load Selected Customer's Orders
         public void LoadAssigned()
         {
@@ -88,7 +88,7 @@ namespace prjXISD_ASP_Framework
                 sb.Append("<li>");
                 sb.Append("<div class=\"listItem\">");
                 sb.Append("<div style=\"width: 70%; display: inline-block\">");
-                sb.Append($"<h3>Order: {o.ordNum}</h3>");
+                sb.Append($"<h3 style=\"color: yellow;\">Order: {o.ordNum}</h3>");
                 sb.Append($"<p>");
                 sb.Append($"From: {o.fromDepot}");
                 sb.Append($"<br />");
@@ -109,7 +109,7 @@ namespace prjXISD_ASP_Framework
             ordersA.InnerHtml = sb.ToString();
             #endregion
         }
-        
+
         //Load Selected Customer's Orders
         public void LoadCompleted()
         {
@@ -126,7 +126,7 @@ namespace prjXISD_ASP_Framework
                 sb.Append("<li>");
                 sb.Append("<div class=\"listItem\">");
                 sb.Append("<div style=\"width: 70%; display: inline-block\">");
-                sb.Append($"<h3>Order: {o.ordNum}</h3>");
+                sb.Append($"<h3 style=\"color: green;\">Order: {o.ordNum}</h3>");
                 sb.Append($"<p>");
                 sb.Append($"From: {o.fromDepot}");
                 sb.Append($"<br />");

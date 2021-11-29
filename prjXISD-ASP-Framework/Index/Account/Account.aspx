@@ -10,138 +10,105 @@
                 <div class="AccountDiv column">
                     <center>
                         <h2>User Details</h2>
-                        <div style="text-align: center" class="listDiv">
-
-                            <table runat="server" id="tblAccountSettings" style="width: 95%; margin-top: 10px">
-
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <%--User name--%>
-
+                        <div class="listDiv">
+                            <table runat="server" id="tblDetails" style="width: 90%; margin-top: 10px">
                                 <tr>
                                     <td>
                                         <h3>Name</h3>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:TextBox CssClass="aspTextBox" ID="txtUserName" runat="server" OnTextChanged="txtUserName_TextChanged"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-
-                                <%--User contact number--%>
-                                <tr>
                                     <td>
                                         <h3>Contact Number</h3>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:TextBox CssClass="aspTextBox" ID="txtUserNum" runat="server" OnTextChanged="txtUserNum_TextChanged"></asp:TextBox>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtEmpName" runat="server"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtContactNum" runat="server"></asp:TextBox>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-
-                                <%--Employee number--%>
                                 <tr>
                                     <td>
                                         <h3>Employee Number</h3>
                                     </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        <asp:TextBox CssClass="aspTextBox" ID="txtEmpNum" runat="server" OnTextChanged="txtEmpNum_TextChanged"></asp:TextBox>
+                                        <h3>User Role</h3>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
+                                    <td>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtEmpNum" runat="server" ReadOnly="True"></asp:TextBox>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtRole" runat="server" ReadOnly="True"></asp:TextBox>
+                                    </td>
                                 </tr>
-
-                                <%--Save button--%>
                             </table>
-                            <asp:Button CssClass="aspButton" ID="btnSaveDetails" runat="server" Text="Save Details" OnClick="btnSaveDetails_Click"></asp:Button>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Button CssClass="aspButton btnSave" ID="btnSave" runat="server" Text="Save Changes" />
                         </div>
                     </center>
                 </div>
 
                 <div class="AccountDiv column">
                     <center>
-                        <h2>Password</h2>
-                        <div style="text-align: center" runat="server" id="divCustomers" class="listDiv">
-                            <table runat="server" id="Table1" style="width: 95%; margin-top: 10px">
-
-
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <%--old password--%>>
+                        <h2>Change Password</h2>
+                        <div runat="server" id="divCustomers" class="listDiv">
+                            <table runat="server" id="Table1" style="width: 90%; margin-top: 10px">
                                 <tr>
                                     <td>
                                         <h3>Old Password</h3>
                                     </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <asp:TextBox CssClass="aspTextBox" ID="txtOldPass" runat="server" OnTextChanged="txtOldPass_TextChanged"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td></td>
                                 </tr>
-
-                                <%--New password--%>
+                                <tr>
+                                    <td>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtOldPass" runat="server" OnTextChanged="txtOldPass_TextChanged" TextMode="Password"></asp:TextBox>
+                                    </td>
+                                    <td></td>
+                                </tr>
                                 <tr>
                                     <td>
                                         <h3>New Password</h3>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        <asp:TextBox CssClass="aspTextBox" ID="txtNewPass" runat="server" OnTextChanged="txtNewPass_TextChanged"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                </tr>
-
-                                <%--confirm new password--%>
-                                <tr>
-                                    <td>
-                                        <h3>Confirm New Password</h3>
+                                        <h3></h3>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:TextBox CssClass="aspTextBox" ID="txtConfirmPass" runat="server" OnTextChanged="txtConfirmPass_TextChanged"></asp:TextBox>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtNewPass" runat="server" OnTextChanged="txtNewPass_TextChanged" TextMode="Password"></asp:TextBox>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
+                                    <td>
+                                        <asp:TextBox Width="100%" CssClass="aspTextBox" ID="txtConfirmPass" runat="server" OnTextChanged="txtConfirmPass_TextChanged" TextMode="Password"></asp:TextBox>
+                                    </td>
                                 </tr>
                             </table>
-                            <asp:Button CssClass="aspButton" ID="btnChangePass" runat="server" Text="Change Password" OnClick="btnChangePass_Click"></asp:Button>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Button CssClass="aspButton btnSave" ID="btnChangePass" runat="server" Text="Change Password" OnClick="btnChangePass_Click"></asp:Button>
                         </div>
                     </center>
                 </div>
@@ -150,6 +117,11 @@
     </div>
 
     <style>
+        .btnSave {
+            float: right;
+            margin-right: 15px !important;
+        }
+
         td {
             width: 49%;
             vertical-align: top;
@@ -170,7 +142,7 @@
             background-color: #252526;
             border: 2px solid #FF7A38;
             border-radius: 10px;
-            width: 30%;
+            width: 40%;
             margin: 2%;
             padding: 7px 5px 7px 5px;
             margin-left: -15px;
@@ -180,7 +152,6 @@
                 background-color: black;
                 border: 2px solid #FF7A38;
                 border-radius: 10px;
-                width: 30%;
                 margin: 2%;
                 padding: 7px 5px 7px 5px;
                 box-shadow: 0px 0px 5px #FF7A38;
@@ -188,11 +159,10 @@
             }
 
         .aspTextBox {
+            text-align: center;
             width: 45%;
             background-color: white;
             border-color: black;
-            text-align: center;
-            margin-top: -5%;
             padding: 10px 5px 10px 5px;
             border-radius: 15px;
         }
@@ -202,8 +172,6 @@
             }
 
             .aspTextBox:focus {
-                text-align: center;
-                margin-top: 1%;
                 padding: 10px 5px 10px 5px;
                 border-radius: 15px;
                 box-shadow: 0px 0px 15px #FF7A38;

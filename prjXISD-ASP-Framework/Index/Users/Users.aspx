@@ -70,15 +70,15 @@
                             <br />
                             <br />
                             <br />
-                            <asp:Button CssClass="aspButton btnDelete" ID="btnDelete" runat="server" Text="Delete User" OnClientClick="return confirm('You are deleting this User profile! Continue?');" OnClick="btnDelete_Click" />
-                            <asp:Button CssClass="aspButton btnSave" ID="btnSave" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
+                            <asp:Button CssClass="aspButton btnDelete btnAnim" ID="btnDelete" runat="server" Text="Delete User" OnClientClick="return confirm('You are deleting this User profile! Continue?');" OnClick="btnDelete_Click" />
+                            <asp:Button CssClass="aspButton btnSave btnAnim" ID="btnSave" runat="server" Text="Save Changes" OnClick="btnSave_Click" />
                         </div>
                     </center>
                 </div>
             </div>
         </center>
 
-        <asp:Button CssClass="aspButton btnAddUser" runat="server" ID="btnAddUser" Text="Add Employee" OnClick="btnAddUser_Click" />
+        <asp:Button CssClass="aspButton btnAddUser btnAnim" runat="server" ID="btnAddUser" Text="Add Employee" OnClick="btnAddUser_Click" />
 
     </div>
 
@@ -121,12 +121,6 @@
             width: 40%;
             margin: 2%;
             padding: 7px 5px 7px 5px;
-            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-            outline: 1px solid;
-            outline-color: rgb(255, 122, 56, .5);
-            outline-offset: 0px;
-            text-shadow: none;
-            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
         }
 
             .aspButton:hover {
@@ -135,9 +129,6 @@
                 border-radius: 10px;
                 margin: 2%;
                 padding: 7px 5px 7px 5px;
-                box-shadow: 0 0 20px rgba(255, 255, 255, .2);
-                outline-color: rgb(255, 122, 56, .0);
-                outline-offset: 15px;
             }
 
         .aspTextBox {

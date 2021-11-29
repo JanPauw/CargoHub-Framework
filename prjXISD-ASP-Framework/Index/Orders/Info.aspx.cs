@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,6 +13,8 @@ namespace prjXISD_ASP_Framework.Index.Orders
     {
         private OrderList orders = new OrderList();
         private CustomerList customers = new CustomerList();
+        private EmpList emps = new EmpList();
+        private UserList users = new UserList();
 
         //Order and Customer used on this Page
         Order oTemp = null;
@@ -41,6 +44,7 @@ namespace prjXISD_ASP_Framework.Index.Orders
                     cTemp = customers.List().Where(x => x.custID == Convert.ToInt32(oTemp.custID)).FirstOrDefault();
 
                     LoadFields();
+                    LoadDrivers();
                 }
                 else
                 {
@@ -56,6 +60,41 @@ namespace prjXISD_ASP_Framework.Index.Orders
             return;
         }
 
+        public void LoadDrivers()
+        {
+            string num;
+
+            if (!String.IsNullOrWhiteSpace(Request.QueryString["ordNum"]))
+            {
+                num = Request.QueryString["ordNum"];
+            }
+
+            if (true)
+            {
+
+            }
+
+            selDrivers.Items.Clear();
+            int count = -1;
+
+            selDrivers.Items.Add("Un-Assigned");
+            count++;
+
+            foreach (Employee e in emps.List().Where(x => x.empRole == "Driver").ToList())
+            {
+                selDrivers.Items.Add(e.empName);
+                count++;
+                selDrivers.Items[count].Value = e.empNum;
+            }
+
+            for (int i = 0; i < selDrivers.Items.Count; i++)
+            {
+                if (selDrivers.Items[i].Value == oTemp.empNum)
+                {
+                    selDrivers.SelectedIndex = i;
+                }
+            }
+        }
 
 
         //Browser Alert Method - To Display "MessageBox" type content.
@@ -83,6 +122,14 @@ namespace prjXISD_ASP_Framework.Index.Orders
                     toDepot.SelectedIndex = i;
                 }
             }
+
+            for (int i = 0; i < selStatus.Items.Count; i++)
+            {
+                if (selStatus.Items[i].Value == oTemp.ordStatus)
+                {
+                    selStatus.SelectedIndex = i;
+                }
+            }
         }
 
         protected void btnUpdateOrder_Click(object sender, EventArgs e)
@@ -105,6 +152,33 @@ namespace prjXISD_ASP_Framework.Index.Orders
             Response.Redirect(Session["PrevPage"].ToString());
             alert("Order Updated Successfully!");
             return;
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //Get Selected Order
+            if (oTemp == null)
+            {
+                string num = Request.QueryString["ordNum"];
+
+                oTemp = orders.List().Where(x => x.ordNum == num).FirstOrDefault();
+            }
+
+            if (selDrivers.SelectedIndex > 0)
+            {
+                oTemp.empNum = selDrivers.Items[selDrivers.SelectedIndex].Value;
+                oTemp.ordStatus = selStatus.Items[selStatus.SelectedIndex].Value;
+
+                orders.UpdateOrder(oTemp);
+
+                Response.Redirect(Session["PrevPage"].ToString());
+                return;
+            }
+            else
+            {
+                alert("Please select a driver!");
+                return;
+            }
         }
     }
 }

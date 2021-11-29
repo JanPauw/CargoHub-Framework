@@ -24,31 +24,31 @@ namespace prjXISD_ASP_Framework
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOrders;
 
         /// <summary>
-        /// tblAccountSettings control.
+        /// tblDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tblAccountSettings;
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblDetails;
 
         /// <summary>
-        /// txtUserName control.
+        /// txtEmpName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        protected global::System.Web.UI.WebControls.TextBox txtEmpName;
 
         /// <summary>
-        /// txtUserNum control.
+        /// txtContactNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserNum;
+        protected global::System.Web.UI.WebControls.TextBox txtContactNum;
 
         /// <summary>
         /// txtEmpNum control.
@@ -60,13 +60,22 @@ namespace prjXISD_ASP_Framework
         protected global::System.Web.UI.WebControls.TextBox txtEmpNum;
 
         /// <summary>
-        /// btnSaveDetails control.
+        /// txtRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveDetails;
+        protected global::System.Web.UI.WebControls.TextBox txtRole;
+
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
 
         /// <summary>
         /// divCustomers control.
