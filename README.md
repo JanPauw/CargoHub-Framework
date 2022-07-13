@@ -1,4 +1,5 @@
 # Welcome to CargoHub
+NB! Being Recreated in .NET 6 MVC (Here: https://github.com/JanPauw/CargoHub)
 
 CargoHub is a tool used to track and keep record of deliveries, vehicles, employees, and more!
 
